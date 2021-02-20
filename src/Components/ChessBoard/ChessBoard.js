@@ -10,7 +10,6 @@ const ChessBoard = () => {
   const [closeIcon, setCloseIcon] = useState(false);
 
   const isValidPosition = (pos1, pos2) => {
-    console.log(pos1, pos2, "pos");
     const [pos1Row, pos1Col] = pos1;
     const [pos2Row, pos2Col] = pos2;
 
@@ -20,8 +19,6 @@ const ChessBoard = () => {
 
       let diff = pos1Sum - pos2Sum;
       diff = Math.sign(diff) * diff;
-
-      // console.log(diff, pos1Sum, pos2Sum, "diff");
 
       if (diff % 11 === 0 || diff % 9 === 0) {
         return true;
@@ -83,12 +80,7 @@ const ChessBoard = () => {
         return <Queen />;
       }
     }
-    return (
-      <div>
-        {row}
-        {col}
-      </div>
-    );
+    return null;
   };
 
   const renderChessBoard = () => {
