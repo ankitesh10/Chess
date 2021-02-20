@@ -1,0 +1,27 @@
+.board {
+  height: 80.2rem;
+  width: 80.2rem;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  border: 1px solid black;
+}
+
+.cell {
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cellWhite {
+  composes: cell;
+  background-color: white;
+  color: black;
+}
+
+.cellBlack {
+  composes: cell;
+  background-color: black;
+  color: white;
+}
